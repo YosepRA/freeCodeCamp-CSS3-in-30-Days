@@ -1,0 +1,19 @@
+{
+  "name": "css3-in-30-days",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YosepRA/freeCodeCamp-CSS3-in-30-Days.git"
+  },
+  "author": "YosepRA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YosepRA/freeCodeCamp-CSS3-in-30-Days/issues"
+  },
+  "homepage": "https://github.com/YosepRA/freeCodeCamp-CSS3-in-30-Days#readme"
+}
