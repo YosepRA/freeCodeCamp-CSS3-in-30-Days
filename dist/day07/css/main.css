@@ -1,0 +1,42 @@
+img {
+  width: 70%;
+  transition: all 300ms ease;
+}
+
+img:hover {
+  cursor: crosshair;
+}
+
+/* ======================================================================================================== */
+
+.image-grayscale {
+  filter: grayscale(1);
+}
+
+.image-grayscale:hover {
+  filter: grayscale(0);
+}
+
+.image-blur {
+  filter: blur(3px);
+}
+
+.image-blur:hover {
+  filter: blur(0);
+}
+
+.image-inverted {
+  filter: invert(1);
+}
+
+.image-inverted:hover {
+  filter: invert(0);
+}
+
+.image-sepia {
+  filter: sepia(1);
+}
+
+.image-sepia:hover {
+  filter: sepia(0);
+}
