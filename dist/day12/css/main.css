@@ -1,0 +1,22 @@
+.tutorial-section {
+  --primary-color: orangered;
+  --secondary-color: hotpink;
+  --base-measurement: 20px;
+}
+
+.box {
+  text-align: center;
+  color: white;
+  width: calc(var(--base-measurement) * 10);
+  height: calc(var(--base-measurement) * 10);
+  line-height: calc(var(--base-measurement) * 10);
+  margin: var(--base-measurement);
+}
+
+.box1 {
+  background-color: var(--primary-color);
+}
+
+.box2 {
+  background-color: var(--secondary-color);
+}

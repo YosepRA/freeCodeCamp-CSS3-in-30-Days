@@ -1,0 +1,15 @@
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  min-height: 100%;
+  margin-bottom: 50px;
+}
+
+footer {
+  background-color: #ddd;
+  text-align: center;
+  padding: 10px 20px;
+}
