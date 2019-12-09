@@ -1,0 +1,166 @@
+.path {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #333;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.path::after {
+  display: block;
+  position: absolute;
+  content: '';
+  border-top: 12px dotted white;
+  width: 90%;
+  top: 50%;
+  left: 5%;
+  margin-top: -6px;
+}
+
+.pacman {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: -20%;
+
+  animation: move-right 4s linear infinite;
+  animation-delay: 500ms;
+}
+
+.pacman::after,
+.pacman::before {
+  display: block;
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+  border: 30px solid yellow;
+  margin-top: -30px;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.pacman::before {
+  animation: pacman-top 500ms linear infinite;
+}
+
+.pacman::after {
+  transform: rotate(-90deg);
+  animation: pacman-bottom 500ms linear infinite;
+}
+
+.ghost {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 20%;
+  height: 70px;
+  width: 60px;
+  margin-top: -35px;
+  background-color: red;
+  border-radius: 50% 50% 0 0;
+
+  animation: move-right 4s linear infinite, color-alter 500ms linear infinite;
+}
+
+.ghost::before,
+.ghost::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 6px;
+  background-color: white;
+  width: 20px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.ghost::after {
+  left: 28px;
+}
+
+.eyes::before,
+.eyes::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 7px;
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  z-index: 1;
+  animation: wiggle-left 500ms linear infinite;
+}
+
+.eyes::after {
+  left: 30px;
+  animation: wiggle-right 500ms linear infinite;
+}
+
+.skirt,
+.skirt::before,
+.skirt::after {
+  position: absolute;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border: 10px solid #333;
+  border-top-color: transparent;
+}
+
+.skirt::before {
+  left: 10px;
+  content: '';
+}
+
+.skirt::after {
+  left: 30px;
+  content: '';
+}
+
+/* ======================================================================================================== */
+/* Keyframes */
+/* ======================================================================================================== */
+
+@keyframes pacman-top {
+  50% {
+    transform: rotate(44deg);
+  }
+}
+
+@keyframes pacman-bottom {
+  50% {
+    transform: rotate(-134deg);
+  }
+}
+
+@keyframes move-right {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes wiggle-left {
+  50% {
+    left: 14px;
+  }
+}
+
+@keyframes wiggle-right {
+  50% {
+    left: 38px;
+  }
+}
+
+@keyframes color-alter {
+  50% {
+    background-color: hotpink;
+  }
+}
