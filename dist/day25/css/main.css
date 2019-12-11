@@ -1,0 +1,46 @@
+img {
+  width: 100%;
+}
+
+.panel {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+}
+
+.panel-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  background-color: red;
+  transition: transform 400ms ease-out;
+}
+
+.panel:hover .panel-content {
+  transform: translate(0, 0);
+}
+
+.slide-top .panel-content {
+  transform: translateY(-100%);
+}
+
+.slide-right .panel-content {
+  transform: translateX(100%);
+}
+
+.slide-bottom .panel-content {
+  transform: translateY(100%);
+}
+
+.slide-left .panel-content {
+  transform: translateX(-100%);
+}

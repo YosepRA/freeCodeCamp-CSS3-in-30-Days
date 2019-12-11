@@ -1,0 +1,33 @@
+.accordion-item {
+  position: relative;
+}
+
+.accordion-title {
+  position: relative;
+  display: block;
+  z-index: 1;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  background-color: var(--main-bgColor);
+}
+
+.accordion-title::after {
+  position: absolute;
+  right: 20px;
+  display: inline-block;
+  content: '▼';
+}
+
+.accordion-title:focus + .accordion-content {
+  height: 100px;
+  padding: 10px 20px;
+}
+
+.accordion-content {
+  height: 0;
+
+  background-color: white;
+  overflow: hidden;
+  transition: all 500ms ease;
+}
