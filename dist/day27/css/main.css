@@ -1,0 +1,45 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 5;
+}
+
+.dropdown-btn {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+  background-color: rgb(135, 201, 221);
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+}
+
+.dropdown:hover > .dropdown-menu a {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 1;
+  min-width: 150px;
+  text-align: center;
+}
+
+.dropdown-menu a {
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  padding: 10px;
+  opacity: 0;
+  background-color: white;
+  color: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  transition: all 400ms ease-out;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ddd;
+}
